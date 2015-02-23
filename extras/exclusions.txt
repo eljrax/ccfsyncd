@@ -1,0 +1,7 @@
+# Example exclusions - using POSIX regexes
+# These apply both to the remote end as well as the local end. 
+# Matched files will not be uploaded from local, or deleted from remote
+# http://en.wikipedia.org/wiki/Regular_expression#POSIX_basic_and_extended
+
+[A-Z]haa$
+exclude[0-5]

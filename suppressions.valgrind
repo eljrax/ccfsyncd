@@ -1,0 +1,151 @@
+{
+   <openssl_random_gen_in_curl>
+   Memcheck:Cond
+   ...
+   fun:curl_easy_perform
+   ...
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Value8
+   ...
+   fun:curl_easy_perform
+   ...
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Cond
+   ...
+   fun:curl_easy_setopt
+   ...
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Param
+   write(buf)
+   obj:/lib/x86_64-linux-gnu/lib*
+   ...
+   fun:curl_multi_perform
+}
+
+{
+   <openssl_random_gen_cascade_to_json>
+   Memcheck:Cond
+   ...
+   fun:json_loads
+   ...
+}
+{
+   <openssl_random_gen_cascade_to_json>
+   Memcheck:Value8
+   ...
+   fun:json_loads
+   ...
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Cond
+   fun:_IO_file_xsputn@@GLIBC_2.2.5
+   fun:vfprintf
+   fun:__fprintf_chk
+   fun:log_msg
+   fun:upload_file
+   fun:start_thread
+   fun:clone
+}
+{
+   <monitor_dir_thread_is_blocking_will_always_be_killed>
+   Memcheck:Leak
+   match-leak-kinds: possible
+   fun:calloc
+   fun:_dl_allocate_tls
+   fun:pthread_create@@GLIBC_2.2.5
+   fun:main
+}
+{
+   <aesni_cbc_encrypt_I_curse_thee>
+   Memcheck:Cond
+   fun:vfprintf
+   fun:__printf_chk
+   fun:doAuth
+   fun:init_auth
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Param
+   write(buf)
+   obj:/lib/x86_64-linux-gnu/*
+   ...
+   fun:doAuth
+   ...
+}
+{
+   <openssl_random_gen_cascade_to_auth>
+   Memcheck:Cond
+   ...
+   fun:doAuth
+   ...
+}
+{
+   <openssl_random_gen_cascade_to_auth>
+   Memcheck:Value8
+   ...
+   fun:doAuth
+   ...
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Cond
+   fun:vfprintf
+   fun:__vasprintf_chk
+   fun:__asprintf_chk
+   fun:get_cf_files_list
+   fun:list_files_cf
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Value8
+   ...
+   fun:log_msg
+   ...
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Cond
+   ...
+   fun:log_msg
+   ...
+}
+
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Cond
+   fun:vfprintf
+   fun:__vasprintf_chk
+   fun:__asprintf_chk
+   fun:copy_file_and_remove
+   fun:start_thread
+   fun:clone
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Cond
+   fun:vfprintf
+   fun:__vasprintf_chk
+   fun:__asprintf_chk
+   fun:delete_file
+   fun:start_thread
+   fun:clone
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Cond
+   fun:vfprintf
+   fun:__vasprintf_chk
+   fun:__asprintf_chk
+   fun:upload_file
+   fun:start_thread
+   fun:clone
+}
